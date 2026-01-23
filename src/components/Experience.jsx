@@ -1,14 +1,76 @@
-const Experience = () => {
-  return (
-    <section className="bg-black-200">
-      <div className="max-w-7xl mx-auto px-6 py-20 text-white">
-        <h2 className="text-3xl font-bold">Experience</h2>
-        <p className="mt-4 text-secondary">
-          Timeline will go here.
-        </p>
-      </div>
-    </section>
-  );
-};
+import { VerticalTimeline , VerticalTimelineElement } from "react-vertical-timeline-component"
+import { motion } from 'framer-motion';
 
-export default Experience;
+import 'react-vertical-timeline-component/style.min.css';
+
+import { styles } from '../styles';
+import { experiences } from '../constants';
+import { SectionWrapper } from '../hoc';
+import { textVariant } from '../utils/motion';
+
+const ExperienceCard = ({ experience }) => (
+<VerticalTimelineElement
+  contentStyle={{ background: '#1d1836', color: '#fff'}}
+  contentArrowStyle={{ borderRight: '7px solid #232631'}}
+  date={experience.date}
+  iconStyle={{ background: experience.iconBg }}
+  icon={
+    <div className="flex h-full w-full items-center justify-center">
+      <img
+        src={experience.icon}
+        alt={experience.company_name}
+        className="h-[100%] w-[100%] object-contain"
+      />
+    </div>
+  }
+>
+  <div>
+    <h3 className="text-white text-[24px] font-bold">
+      {experience.title}
+    </h3>
+    
+
+    <p className="text-secondary text-[16px] font-semibold" style={{ margin: 0, paddingBottom: 8 }}>
+      {experience.company_name}
+    </p>
+  
+  </div>
+
+  <ul className="mt-5 list-disc ml-5 space-y-2 leading-5.5">
+    {experience.points.map((point, index) => (
+      <li
+        key={`experience-point-${index}`}
+        className="text-white-100 text-[14px] pl-1 tracking-wider"
+      >
+        {point}
+      </li>
+    ))}
+  </ul>
+</VerticalTimelineElement>
+)
+
+const Experience = () => {
+  return(
+    <>
+      <motion.div
+        variants={textVariant()}
+        className="text-center"
+      >
+
+        <p className={styles.sectionSubText}>What have I done so far</p>
+        <h2 className={`${styles.sectionHeadText} text-[32px] sm:text-[36px] md:text-[40px] lg:text-[54px]`}>Work Experience.</h2>
+
+      </motion.div>
+
+      <div className="mt-20 w-full">
+        <VerticalTimeline className="mx-auto max-w-6xl">
+          {experiences.map((experience, index) => (
+            <ExperienceCard key={index} experience={experience} />
+          ))}
+        </VerticalTimeline>
+      </div>
+    </>
+  )
+}
+
+export default SectionWrapper(Experience, "work")
