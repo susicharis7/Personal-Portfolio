@@ -23,6 +23,7 @@ import jl from "./company/jl.png";
 import bob from "./company/bob.png";
 import pc from "./company/pc.png";
 
+
 import carRental from "./carRental.PNG";
 import studyflow from "./studyflow.PNG";
 import currentlyHere from "./currentlyHere.png";
