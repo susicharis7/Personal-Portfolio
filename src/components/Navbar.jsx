@@ -10,6 +10,33 @@ const Navbar = () => {
   const [active, setActive] = useState(''); 
   const [toggle, setToggle] = useState(false);
 
+  // IntersectionObserver
+  useEffect(() => {
+    const sections = navLinks.map(link => document.getElementById(link.id)).filter(Boolean);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const navLink = navLinks.find(link => link.id === entry.target.id);
+
+            if (navLink) {
+              setActive(navLink.title);
+            }
+          }
+        });
+      },
+      {
+        threshold: 0.4,
+        rootMargin: '-80px 0px -50px 0px'
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}>
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
