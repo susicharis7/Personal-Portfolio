@@ -24,7 +24,7 @@ const Navbar = () => {
           <p className='text-white text-[18px] font-bold cursor-pointer'>
             Haris Sušić
             <span className="hidden sm:block text-secondary text-[12px] sm:text-[14px] font-medium leading-snug">
-              Software Engineer
+              Software Developer
             </span>
           </p>
         </Link>

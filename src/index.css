@@ -114,6 +114,38 @@
   -webkit-text-fill-color: transparent;
 }
 
+.yellow-text-gradient {
+  background: #f9d423; /* fallback */
+  background: -webkit-linear-gradient(
+    to top,
+    #f9d423,
+    #ff4e50
+  );
+  background: linear-gradient(
+    to top,
+    #f9d423,
+    #ff4e50
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navy-blue-text-gradient {
+  background: #052e63; /* fallback */
+  background: -webkit-linear-gradient(
+    to top,
+    #0b1f3a,
+    #486bca
+  );
+  background: linear-gradient(
+    to top,
+    #1769d3,
+    #1e3a8a
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* canvas- styles */
 .canvas-loader {
   font-size: 10px;
