@@ -68,4 +68,4 @@ npm run preview
 - 3D animations use R3F/Drei canvases and may impact performance on low-end devices.
 
 ## Attribution
-This project was initially built as a reference from another GitHub repo, then heavily customized with my own code and assets. I reworked and optimized many parts, updated dependencies to newer versions, and used it as a strong hands-on introduction to Tailwind CSS, Three.js, and React while expanding my overall knowledge.
+This project was initially built as a reference from another GitHub repo, then heavily customized with my own code and assets. I reworked and optimized many parts, updated dependencies to newer versions, and used it as a strong hands-on introduction to Tailwind CSS and Three.js, while expanding my overall knowledge.
