@@ -1,6 +1,6 @@
 # Portfolio-Project
 
-Personal portfolio web app built with React + Vite (JSX), Tailwind CSS, and Three.js (via React Three Fiber/Drei). Includes animated sections, interactive 3D elements, and responsive layout.
+Personal portfolio web app built with React, Tailwind CSS, and Three.js (via React Three Fiber/Drei). Includes animated sections, interactive 3D elements, and responsive layout.
 
 ## Tech Stack
 - React (JSX)
