@@ -3,8 +3,7 @@
 Personal portfolio web app built with React, Tailwind CSS, and Three.js (via React Three Fiber/Drei). Includes animated sections, interactive 3D elements, and responsive layout.
 
 ## Tech Stack
-- React (JSX)
-- Vite
+- React 
 - Tailwind CSS (v4)
 - Framer Motion
 - Three.js via React Three Fiber + Drei
